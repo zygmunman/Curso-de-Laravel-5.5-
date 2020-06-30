@@ -30,6 +30,7 @@ class UsersModuleTest extends TestCase
     //Prueba para comprobar el funcionamiento de la ruta "/usuarios/nuevo" que muestra "Crear nuevo usuario"
     function it_loads_the_new_users_page()
     {
+        
         $this->get('/usuarios/nuevo') //queremos acceder a la URL de un nuevo ususario
              ->assertStatus(200) //comprobar que carga correctamente esta URL
              ->assertSee('Crear nuevo usuario'); //comprobar que se ve="Crear nuevo usuario"
