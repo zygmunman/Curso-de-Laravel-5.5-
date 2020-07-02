@@ -6,14 +6,20 @@
     <title>Listado de usuarios - Curso styde</title>
 </head>
 <body>
-    <h1><?= e($title) ?></h1>
+    <h1>{{$title}}</h1>
+    <hr>
+   
     <ul>
-        <?php foreach($users as $user): ?>
+        @forelse ($users as $user)
 
-            <li><?= e($user)?></li>
+            <li>{{$user}}</li>
+   
+        @empty
 
-        <?php endforeach; ?>
-    
+            <p>No hay usuarios registrados</p>
+        
+        @endforelse
+       
     </ul>
 </body>
 </html>
