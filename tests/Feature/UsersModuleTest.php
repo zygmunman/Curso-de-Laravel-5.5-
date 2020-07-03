@@ -35,7 +35,7 @@ class UsersModuleTest extends TestCase
     {
         $this->get('/usuarios/5') //queremos acceder a la URL del usuario 5
              ->assertStatus(200) //comprobar que carga correctamente esta URL
-             ->assertSee('Mostrando detalles del usuario #5'); //comprobar que se ve="Detalles del usuario #5"
+             ->assertSee('Mostrando detalle del usuario: 5'); //comprobar que se ve="Detalles del usuario #5"
     }
 
       /** @test */
